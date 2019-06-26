@@ -1,6 +1,6 @@
 {
   "name": "react-native-navigation-twopane",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Two pane UI navigator for react-navigation",
   "main": "./index.js",
   "scripts": {
