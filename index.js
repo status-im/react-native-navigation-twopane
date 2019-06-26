@@ -61,19 +61,6 @@ function createTwoPaneNavigator(routeConfigMap, navigationConfig) {
 
     const defaultGetStateForAction = router.getStateForAction;
     router.getStateForAction = (action: any, state: any) => {
-
-        if (action.type === NavigationActions.NAVIGATE &&
-            state.routes[state.index].routeName == navigationConfig.initialRouteName &&
-            action.routeName in routeConfigMap) {
-
-            const resetAction = StackActions.reset({
-                index: 0,
-                actions: [NavigationActions.navigate({routeName: action.routeName, params: action.params})],
-
-            });
-
-            return defaultGetStateForAction(resetAction, state);
-        }
         return defaultGetStateForAction(action, state);
     };
 
